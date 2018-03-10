@@ -5,6 +5,7 @@
         print $_POST['date'];
         $command = escapeshellcmd('python connect-hadoop.py '.$_POST['date']);
         $output = shell_exec($command);
+        print $output;
         global $obj;
         $obj = json_decode($output);    
         print_r($obj);   
