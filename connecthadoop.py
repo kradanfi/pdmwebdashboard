@@ -17,4 +17,4 @@ st = st+']'
 #string4 = '{"input":"'+str(sys.argv[1])+'"}'
 
 
-print st
+print(st)

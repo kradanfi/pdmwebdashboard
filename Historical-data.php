@@ -12,7 +12,7 @@
         
         global $obj;
         $obj = json_decode($output);    
-        print_r($obj);   
+        print $obj[0]->{'Temperature'};
         $display = "inline";
        }
        
