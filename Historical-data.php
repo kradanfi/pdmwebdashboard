@@ -7,7 +7,7 @@
         $output = shell_exec($command);
         global $obj;
         $obj = json_decode($output);    
-        print $obj[3]->{'input'};       
+        print $output     
         $display = "inline";
        }
        
