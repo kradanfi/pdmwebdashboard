@@ -11,6 +11,7 @@
         print $output;
 
         $command = escapeshellcmd('python readhadoop.py ');
+        print $command;
         $output = shell_exec($command);
         print $output;
         
