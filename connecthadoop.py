@@ -19,4 +19,4 @@ st = st+']'
 
 
 hdfs.dump(st, "test/hello.txt")
-hdfs.get("test/hello.txt", "/opt/lampp/htdocs/pdmwebdashboard/tmp.txt")
+hdfs.get("test/hello.txt", "/tmp/tmp.txt")
