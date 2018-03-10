@@ -1,11 +1,11 @@
 <?php 
       // // header("Refresh:2");
       
-      $command = escapeshellcmd('Python2.py');
+      $command = escapeshellcmd('python Python2.py');
       $output = shell_exec($command);
       global $obj;
       $obj = json_decode($output);
-      print $output;
+      echo $output;
            
   ?>
 <!DOCTYPE html>
