@@ -7,7 +7,7 @@
         $output = shell_exec($command);
         global $obj;
         $obj = json_decode($output);    
-        print ($obj[0]->{'RPM'}) ;    
+          
         $display = "inline";
        }
        
@@ -168,9 +168,10 @@
                       <th>Amp</th>
                     </tr>
                     <?php  
+                      error_reporting(0);
                         if(count($obj->stand))
                         {
-                          foreach ($obj->stand as $idx => $stand) 
+                          foreach ($objas as $stand) 
                           {
                             // Output a row
                             echo "<tr>";
