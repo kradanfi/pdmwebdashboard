@@ -7,7 +7,7 @@
         $output = shell_exec($command);
         global $obj;
         $obj = json_decode($output);    
-          
+        print_r($obj);   
         $display = "inline";
        }
        
@@ -168,7 +168,7 @@
                       <th>Amp</th>
                     </tr>
                     <?php  
-                      error_reporting(0);
+                     // error_reporting(0);
                         
                           foreach ($obj as $stand) 
                           {
