@@ -7,7 +7,7 @@
         $output = shell_exec($command);
         global $obj;
         $obj = json_decode($output);    
-        print $obj ;    
+        print ($obj[0]->{'RPM'}) ;    
         $display = "inline";
        }
        
