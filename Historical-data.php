@@ -126,7 +126,7 @@
                         <div class="input-group-addon">
                           <i class="fa fa-calendar"></i>
                         </div>
-                        <input class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask="" type="text" name="date">
+                        <input class="form-control" data-inputmask="'alias': 'yyyy-mm-dd'" data-mask="" type="text" name="date">
                       </div><!-- /.input group -->
                     </div><!-- /.form group -->
                     <div class="form-group">
@@ -147,7 +147,7 @@
               </div><!-- /.box -->
             </div><!-- /.col -->
             
-           
+            
           </div><!-- /.row -->
           <div class="row" style="display:<?php print $display ?>;">
             <div class="col-xs-12">
@@ -158,29 +158,34 @@
                 <div class="box-body table-responsive no-padding">
                   <table class="table table-hover">
                     <tr>
-                      <th>ID</th>
-                      <th>User</th>
-                      <th>Date</th>
-                      <th>Status</th>
+                      <th>Time</th>
+                      <th>RPM</th>
+                      <th>Temperature</th>
+                      <th>Xaxis</th>
+                      <th>Yaxis</th>
+                      <th>Zaxis</th>
+                      <th>Volt</th>
+                      <th>Amp</th>
                     </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Machine A1</td>
-                      <td><?php  print ($obj[0]->{'Time'});?></td>
-                      <td><span class="label label-success">Good</span></td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Machine A2</td>
-                      <td><?php  print ($obj[1]->{'Time'});?></td>
-                      <td><span class="label label-success">Good</span></td>                      
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Machine A3</td>
-                      <td><?php  print ($obj[2]->{'Time'});?></td>
-                      <td><span class="label label-success">Good</span></td>                      
-                    </tr>                   
+                    <?php  
+                        if(count($obj->stand))
+                        {
+                          foreach ($data->stand as $idx => $stand) 
+                          {
+                            // Output a row
+                            echo "<tr>";
+                            echo "<td>$stand->Time</td>";
+                            echo "<td>$stand->RPM</td>";
+                            echo "<td>$stand->Temperature</td>";
+                            echo "<td>$stand->Xaxis</td>";
+                            echo "<td>$stand->Yaxis</td>";
+                            echo "<td>$stand->Zaxis</td>";
+                            echo "<td>$stand->Volt</td>";
+                            echo "<td>$stand->Amp</td>";
+                            echo "</tr>";
+                          }
+                        }
+                    ?>               
                   </table>
                 </div><!-- /.box-body -->
               </div><!-- /.box -->

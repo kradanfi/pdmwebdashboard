@@ -2,7 +2,7 @@ import sys
 import pydoop.hdfs as hdfs
 
 #create package
-
+date = 'data/'+str(sys.argv[1])
 st  ='['
 for x in hdfs.ls("data/18-02-21/"): 
 	st = st+ hdfs.load(x)
