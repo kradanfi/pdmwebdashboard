@@ -170,7 +170,7 @@
                     <?php  
                         if(count($obj->stand))
                         {
-                          foreach ($data->stand as $idx => $stand) 
+                          foreach ($obj->stand as $idx => $stand) 
                           {
                             // Output a row
                             echo "<tr>";
