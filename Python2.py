@@ -25,14 +25,14 @@
 # print(temp)
 
 
-import sys
+
 
 string1 = '{"Time":"2018-02-22 17:40:49.027245","RPM":"1","Temperature":"24.0","Xaxis":"2497","Yaxis":"2039","Zaxis":"2086","Volt":"8.94","Amp":"0.0"}'
 string2 = '{"Time":"2018-02-22 17:40:49.027245","RPM":"2","Temperature":"24.0","Xaxis":"2497","Yaxis":"2039","Zaxis":"2086","Volt":"8.94","Amp":"0.0"}'
 string3 = '{"Time":"2018-02-22 17:40:49.027245","RPM":"3","Temperature":"24.0","Xaxis":"2497","Yaxis":"2039","Zaxis":"2086","Volt":"8.94","Amp":"0.0"}'
-string4 = '{"input":"'+str(sys.argv[1])+'"}'
 
-string = '[' + string1 + ',' + string2 + ',' + string3 +','+string4+']'
+
+string = '[' + string1 + ',' + string2 + ',' + string3 + ']'
 print(string)
 
 
