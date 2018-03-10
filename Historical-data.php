@@ -2,7 +2,7 @@
       // // header("Refresh:2");
       $display = "none";
       if(isset($_POST['select'])){
-        
+        print $_POST['date'];
         $command = escapeshellcmd('python Python.py '.$_POST['date']);
         $output = shell_exec($command);
         global $obj;
