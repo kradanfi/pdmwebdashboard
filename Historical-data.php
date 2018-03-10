@@ -169,9 +169,8 @@
                     </tr>
                     <?php  
                       error_reporting(0);
-                        if(count($obj->stand))
-                        {
-                          foreach ($objas as $stand) 
+                        
+                          foreach ($obj as $stand) 
                           {
                             // Output a row
                             echo "<tr>";
@@ -185,7 +184,7 @@
                             echo "<td>$stand->Amp</td>";
                             echo "</tr>";
                           }
-                        }
+                        
                     ?>               
                   </table>
                 </div><!-- /.box-body -->
