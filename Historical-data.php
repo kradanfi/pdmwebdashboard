@@ -4,6 +4,7 @@
       if(isset($_POST['select'])){
         print $_POST['date'];
         $command = escapeshellcmd('python connecthadoop.py '.$_POST['date']);
+        print $command;
         $output = shell_exec($command);
         print $output;
         echo $output;
