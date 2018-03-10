@@ -17,6 +17,6 @@ st = st+']'
 #string4 = '{"input":"'+str(sys.argv[1])+'"}'
 
 
-print(st)
+
 hdfs.dump(st, "test/hello.txt")
-hdfs.get("test/hello.txt", "/tmp/hello.txt")
+hdfs.get("test/hello.txt", "/opt/lampp/htdocs/pdmwebdashboard/tmp.txt")
