@@ -3,12 +3,13 @@
       $display = "none";
       if(isset($_POST['select'])){
         print $_POST['date'];
-        $command = escapeshellcmd('python connecthadoop.py '.$_POST['date']);
+        //$command = escapeshellcmd('python connecthadoop.py '.$_POST['date']);
+        $command = escapeshellcmd('python connecthadoop.py ');
         print $command;
-        echo $command;
+        
         $output = shell_exec($command);
         print $output;
-        echo $output;
+        
         global $obj;
         $obj = json_decode($output);    
         print_r($obj);   
