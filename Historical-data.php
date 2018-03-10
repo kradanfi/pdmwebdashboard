@@ -5,6 +5,7 @@
         print $_POST['date'];
         $command = escapeshellcmd('python connecthadoop.py '.$_POST['date']);
         print $command;
+        echo $command;
         $output = shell_exec($command);
         print $output;
         echo $output;
