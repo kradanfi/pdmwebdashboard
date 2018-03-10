@@ -8,7 +8,7 @@ for x in hdfs.ls("data/18-02-21/"):
 #for x in hdfs.ls("date"): 
 	st = st+ hdfs.load(x)
 
-st.replace("\n",",")
+st = st.replace("\n",",")
 st= st[:-1]
 st = st+']'
 
