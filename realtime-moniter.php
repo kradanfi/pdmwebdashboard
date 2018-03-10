@@ -5,7 +5,6 @@
       $output = shell_exec($command);
       global $obj;
       $obj = json_decode($output);
-      echo $output;
            
   ?>
 <!DOCTYPE html>
