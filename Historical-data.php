@@ -3,7 +3,7 @@
       $display = "none";
       if(isset($_POST['select'])){
         print $_POST['date'];
-        $command = escapeshellcmd('python connect-hadoop.py '.$_POST['date']);
+        $command = escapeshellcmd('python connecthadoop.py '.$_POST['date']);
         $output = shell_exec($command);
         print $output;
         echo $output;
