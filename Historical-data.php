@@ -9,6 +9,10 @@
         
         $output = shell_exec($command);
         print $output;
+
+        $command = escapeshellcmd('python readhadoop.py ');
+        $output = shell_exec($command);
+        print $output;
         
         global $obj;
         $obj = json_decode($output);    

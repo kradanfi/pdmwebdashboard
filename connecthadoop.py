@@ -18,3 +18,5 @@ st = st+']'
 
 
 print(st)
+hdfs.dump(st, "test/hello.txt")
+hdfs.get("test/hello.txt", "/tmp/hello.txt")
