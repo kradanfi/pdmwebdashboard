@@ -4,7 +4,7 @@
       if(isset($_POST['select'])){
         print $_POST['date'];
         //$command = escapeshellcmd('python connecthadoop.py '.$_POST['date']);
-        $command = escapeshellcmd('python connecthadoop.py ');
+        $command = escapeshellcmd('hdfs ddfs -ls /');
         print $command;
         
         $output = shell_exec($command);
@@ -13,7 +13,7 @@
         $command = escapeshellcmd('python readhadoop.py ');
         print $command;
         $output = shell_exec($command);
-        print $output;
+        print_r($output);
         
         global $obj;
         $obj = json_decode($output);    
